@@ -1,6 +1,6 @@
 # Working with MVC Flask Framework
 
-### **MVC MODEL VIEW CONTROLLERS**
+# **MVC MODEL VIEW CONTROLLERS**
 
 **What is it?**
 * **Model** - Flask micro-framework
@@ -66,3 +66,23 @@ decorator.
 def user_page(username):
     return f"<h1>Welcome to Python flask app dear {username} </h1>"
 ```
+
+# HTML
+
+We did some **HTML**, **Bootstrap** (a **HTML** framework that allows responsive design with a `mobile-first` directive)
+
+We also did some inheritance or OOP web design using the 'extends' keyword. We created a `master.html` file that extends into
+the `index.html` and shows everything as a result.
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} Engineering 67 {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+```
+
+Here we showed that we want to get the block specified, as of now we have not specified what not to select so it takes all the
+information in the master file. 
