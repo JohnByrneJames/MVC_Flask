@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
 ### **Exercise**
 
-We also created another function which took in a username, dynamically within the URL with a '<username>' tag in the '@app.route'
+We also created another function which took in a username, dynamically within the URL with a `<username>` tag in the `@app.route`
 decorator.
 
 ```python
