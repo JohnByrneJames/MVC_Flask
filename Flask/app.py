@@ -23,6 +23,7 @@ def login_page():
 # import request to use the methods check status code
 # add control flow to redirect the user according to the status code
 
+
 # syntax to run app -> Check instance (5), check route (10) run function (11)
 if __name__ == '__main__':
     app.run(debug=True)
