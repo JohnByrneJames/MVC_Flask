@@ -1,14 +1,14 @@
-# Working with MVC Flask Framework
+# **MVC | Model View Controller**
 
-# **MVC MODEL VIEW CONTROLLERS**
+In python we are using the Flask micro-framework to develop a web application that follows the MVC development
+pattern.
 
-**What is it?**
-* **Model** - Flask micro-framework
-* **Controller** - HTML, CSS, JavaScript with **Python** :snake:
-* **View** - View the information in a web browser _[Display HTML and Python]_
-    * Passed an argument at run time in the browser and displayed the info
+| Model                                                                                            	| View                                                                                                   	| Controller                                                                                                                                                       	|
+|--------------------------------------------------------------------------------------------------	|--------------------------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Uses the models to retrieve  all of the necessary data, organises it, and sends it off to the... 	| The View, which then uses that data to render the final webpage presented to the user in their browser 	| The controller receives that request. Put simply, when a request comes in,   the controller, which handles our app’s business logic,   decides how to handle it. 	|
 
-![MVC_Diagram](Images/MVC_Diagram.png)
+
+![MVC_Diagram](Images/MVC_Diagram.png =100x250)
 
 **Importing the flask Module and using the micro-framework to incorporate MVC**
 ```python
@@ -86,3 +86,9 @@ the `index.html` and shows everything as a result.
 
 Here we showed that we want to get the block specified, as of now we have not specified what not to select so it takes all the
 information in the master file. 
+
+**Great Learning Resources**
+
+**Learn Flask with Python**
+* [**Part 1**](https://realpython.com/introduction-to-flask-part-1-setting-up-a-static-site/)
+* [**Part 2**](https://realpython.com/introduction-to-flask-part-2-creating-a-login-page/)

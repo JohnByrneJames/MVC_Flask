@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--#region StyleSheets and Icons-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block title %}Engineering 67 {% endblock %}</title>
+    <!-- Bootstrap core css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="../css/cover.css" rel="stylesheet">
+    <link rel="icon" href="../Images/Sparta_Favicon.jpg" sizes="64x64" type="image/png">
+    <!--#endregion-->
+
+    <title>Home | Spartan Code Quiz</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<body class="text-center" data-gr-c-s-loaded="True">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+        <img class="masthead-brand" src="../Images/Sparta-global-logo-white.svg" alt="" width="200" height="200">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-{% block content %}
+  <main role="main" class="inner cover">
+      <h1 class="cover-heading font-weight-bold"><span style="color: #417fb1">Python </span> <span style="color: #ffde56"> Quiz</span> </h1>
+      <p class="lead font-weight-normal" > <span class="font-weight-bold" style="color: #417fb1"> Welcome {{username}}, </span> this is a multiple choice quiz based on the Programming language Python! <br>
+        When you are ready, start the test by pressing the button below. <br>
+        <span class="font-weight-bold" style="color: #ffde56">Good Luck!!</span></p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-secondary" style="background-color: #e33661">Start Quiz</a>
+    </p>
+  </main>
 
-    <h1> HTML rendering with Python </h1>
-    <h2> It's show time!!! </h2>
-    <p>&#128512 &#128556</p>
-    <!--<p>{{username}}</p>-->
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p> Template by <a href="https://twitter.com/mdo">@mdo</a></p>
+    </div>
+  </footer>
+</div>
 
-{% endblock %}
 
+<!--#region scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -61,5 +55,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<!--#endregion -->
 </body>
 </html>
