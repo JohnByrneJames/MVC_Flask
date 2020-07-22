@@ -1,14 +1,28 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session
 # import Flask framework from flask Module
 
 # In order for us to use flask we need to create an instance of our app
-app = Flask(__name__, template_folder="../templates/")
+app = Flask(__name__)
 # Syntax to create flask instance (__name__)
+
+
+# Sessions are only visible on the server side, they store data about the user.
+# However to the client these sessions have IDs and are encrypted, therefore cannot be viewed
+# To enable this we need to create a secret key.
+
+# This key should always be completely random
+# Near impossible to guess (so use a random key generate E.G. encrypted)
+app.secret_key = "my precious"
 
 # Simple Redirect Function
 @app.route("/")
-def redirect():
-    return 'login'
+def base():
+    return "Hello world"
+
+
+@app.route("/homepage")
+def homepage():
+    return render_template("master.html")
 
 # syntax for decorators to create a web route is @/route
 # Create a welcome method to display on home/ default page
@@ -19,12 +33,17 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Try again.'
         else:
+            session['logged_in'] = True  # Create session key
             return redirect(url_for('homepage'))
     return render_template("login.html", error=error)
 
-@app.route("/homepage/<username>")
-def homepage(username):
-    return render_template("master.html")
+
+@app.route('/logout')
+def logout():
+    session.pop('logged_in', None)  # Delete session key
+    return redirect(url_for('login'))
+
+
 # Login functionality with GEt, POST methods of HTTP
 # import request to use the methods check status code
 # add control flow to redirect the user according to the status code

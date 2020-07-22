@@ -8,7 +8,7 @@ pattern.
 | Uses the models to retrieve  all of the necessary data, organises it, and sends it off to the... 	| The View, which then uses that data to render the final webpage presented to the user in their browser 	| The controller receives that request. Put simply, when a request comes in,   the controller, which handles our app’s business logic,   decides how to handle it. 	|
 
 
-<img style="text-align: center" src="Images/MVC_Diagram.png" alt="drawing" width="550"/>
+<img style="text-align: center" src="Flask/static/images/MVC_Diagram.png" alt="drawing" width="550"/>
 
 **Importing the flask Module and using the micro-framework to incorporate MVC**
 ```python
@@ -87,8 +87,33 @@ the `index.html` and shows everything as a result.
 Here we showed that we want to get the block specified, as of now we have not specified what not to select so it takes all the
 information in the master file. 
 
+___
+
+# Login Page with Optional Quiz
+
+We have been tasked with creating a log in page using the skills we have developed so far in the academy. This log in page
+is a good starting point as it is a very common element in many companies and is a great example to apply our skills including:
+* **CSV**, **JSON** and **.TXT** file reading and writing
+* **SQL** and **Database**
+* **Secure** **Password** encryption and user authentication
+* **Python** :snake:
+* Python **API** requests, response Codes
+* **MVC** the common and widely used Model, View and Controller design pattern
+* **HTML** and **Bootstrap** along with **Flask** micro-framework
+
 **Great Learning Resources**
 
 **Learn Flask with Python**
 * [**Part 1**](https://realpython.com/introduction-to-flask-part-1-setting-up-a-static-site/)
 * [**Part 2**](https://realpython.com/introduction-to-flask-part-2-creating-a-login-page/)
+
+## Documentation of Login Page
+
+First of all I designed two web page using the popular CSS framework **Bootstrap**. One was a Login Page, and the other
+was a Home page, this was the first part of the work that needed to be complete - it was to facilitate the login functionality and
+successful transfer from Login to Home page when the login was done successfully.
+
+
+
+
+
