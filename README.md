@@ -8,7 +8,7 @@ pattern.
 | Uses the models to retrieve  all of the necessary data, organises it, and sends it off to the... 	| The View, which then uses that data to render the final webpage presented to the user in their browser 	| The controller receives that request. Put simply, when a request comes in,   the controller, which handles our app’s business logic,   decides how to handle it. 	|
 
 
-<img style="position: center;"src="Images/MVC_Diagram.png" alt="drawing" width="550"/>
+<img style="text-align: center" src="Images/MVC_Diagram.png" alt="drawing" width="550"/>
 
 **Importing the flask Module and using the micro-framework to incorporate MVC**
 ```python
