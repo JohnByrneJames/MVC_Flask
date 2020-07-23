@@ -132,7 +132,9 @@ First of all I designed two web page using the popular CSS framework **Bootstrap
 was a Home page, this was the first part of the work that needed to be complete - it was to facilitate the login functionality and
 successful transfer from Login to Home page when the login was done successfully.
 
+## Entity Relationship Diagram for Database
 
+![Image](Flask/static/images/login_Page_and_Quiz_ERD.svg)
 
 
 
