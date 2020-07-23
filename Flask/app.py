@@ -61,14 +61,14 @@ def login():
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'john' or request.form['password'] != '123':
-            # if not session.get('attempts'):
-            #     session['attempts'] = 0
-            # elif session.get('attempts') == 3:
-            #     session.pop('attempts', None)  # Delete attempt counter
-            #     flash("You have been locked out for 10 minutes...")
-            #     return redirect(url_for('base'))
-            # session['attempts'] += 1
-            error = 'Invalid Credentials. Try again.'  # Attempt  [' + session['attempts'].__str__() + ']'
+            if not session.get('attempts'):
+                session['attempts'] = 0
+            elif session.get('attempts') == 3:
+                session.pop('attempts', None)  # Delete attempt counter
+                flash("You have been locked out for 10 minutes...")
+                return redirect(url_for('base'))
+            session['attempts'] += 1
+            error = 'Invalid Credentials. Try again. Attempt  [' + session['attempts'].__str__() + ']'
         else:
             # if session['attempts']:
             #     session.pop('attempts', None)  # Delete attempt counter
@@ -77,6 +77,7 @@ def login():
             session['user'] = request.form['username']
             return redirect(url_for('homepage'))
     return render_template("login.html", error=error)
+
 
 @app.route('/logout')
 @login_required

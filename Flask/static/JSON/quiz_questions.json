@@ -1,0 +1,109 @@
+{
+  "Questions": {
+    "Question1": {
+      "Question": "How do you define a dictionary in Python?",
+      "A": ["{}", true],
+      "B": ["[]", false],
+      "C": ["()", false],
+      "D": ["dict{}", false]
+    },
+    "Question2": {
+      "Question": "Which of these built-in types are NOT Mutable?",
+      "A": ["Lists", false],
+      "B": ["Sets", false],
+      "C": ["Dictionaries", false],
+      "D": ["Tuples", true]
+    },
+    "Question3": {
+      "Question": "What is a pass in Python?",
+      "A": ["The same as return in any other language", false],
+      "B": ["It is a placeholder in an empty function/ method", true],
+      "C": ["Pass tells Python to run the next function", false],
+      "D": ["Pass is an alias for exceptions", false]
+    },
+    "Question4": {
+      "Question": "How do you write a for loop in Python?",
+      "A": ["for x in x_object:",  true],
+      "B": ["for x; x<3; x++",  false],
+      "C": ["in x_object for x:",  false],
+      "D": ["while x in x",  false]
+    },
+    "Question5": {
+      "Question": "What module is used in python to access the Operating System?",
+      "A": ["import operatingSystem", false],
+      "B": ["import os", true],
+      "C": ["import myComputer", false],
+      "D": ["import theOS", false]
+    },
+    "Question6": {
+      "Question": "How do you check the last index of a iterable object?",
+      "A": ["x[0]", false],
+      "B": ["x[-1]", true],
+      "C": ["x.getlast[0]", false],
+      "D": ["-1 in x", false]
+    },
+    "Question7": {
+      "Question": "What does MVC stand for?",
+      "A": ["Model Controller View", false],
+      "B": ["Model Vision Controller", false],
+      "C": ["Model View Controller", true],
+      "D": ["Mutable Vim Console", false]
+    },
+    "Question8": {
+      "Question": "What is the correct Syntax to output 'Hello World' in Python?",
+      "A": ["p('Hello World')", false],
+      "B": ["echo('Hello World')", false],
+      "C": ["print('Hello World')", true],
+      "D": ["display('Hello World')", false]
+    },
+    "Question9": {
+      "Question": "Which of these will convert a string into a integer in Python?",
+      "A": ["int('4')", true],
+      "B": ["'4'.toInteger", false],
+      "C": ["'4'.__int__()", true],
+      "D": ["'4' = int", false]
+    },
+    "Question10": {
+      "Question": "What is the correct way to create a function in python?",
+      "A": ["create myFunction():", false],
+      "B": ["def myFunction():", true],
+      "C": ["function myFunction():", false],
+      "D": ["method myFunction():", false]
+    },
+    "Question11": {
+      "Question": "Which python method is used to remove leading and trailing whitespace from a string?",
+      "A": ["strip()", true],
+      "B": ["trim()", false],
+      "C": ["truncate()", false],
+      "D": ["whitespace.clear()", false]
+    },
+    "Question12": {
+      "Question": "How do you start writing an if statement in python?",
+      "A": ["if x > y then:", false],
+      "B": ["if x > y:", true],
+      "C": ["if (x > y)", false],
+      "D": ["if x > y do:", false]
+    },
+    "Question13": {
+      "Question": "Which collection does not allow duplicate members in python?",
+      "A": ["Tuple", true],
+      "B": ["List", false],
+      "C": ["Set", false],
+      "D": ["Array", false]
+    },
+    "Question14": {
+      "Question": "Which statement is used to stop a loop?",
+      "A":  ["break", true],
+      "B":  ["stop", false],
+      "C":  ["exit()", false],
+      "D":  ["return", false]
+    },
+    "Question15": {
+      "Question": "Which statement is used to jump to the next iteration of a loop?",
+      "A": ["next", false],
+      "B": ["return", false],
+      "C": ["again", false],
+      "D": ["continue", true]
+    }
+  }
+}
