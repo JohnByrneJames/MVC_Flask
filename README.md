@@ -117,7 +117,9 @@ is a good starting point as it is a very common element in many companies and is
     - [ ] 10 Questions
     - [ ] Multiple choice questions
     - [ ] Give feedback (Score)
-`
+    
+**Extended functionality**
+- [ ] Add a if statement in 404 to redirect to Home page if logged in, else go to login
 
 
 **Great Learning Resources**

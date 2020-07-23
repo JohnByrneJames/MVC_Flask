@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+<title>Sparta Global | Testing</title>
+{% endblock %}
+
+{% block content %}
+
+<h3>Users:</h3>
+{% for user in users %}
+  <strong>First Name:</strong> {{ user.firstName }} <br>
+  <strong>Surname:</strong> {{ user.surname }} <br>
+  <strong>Username:</strong> {{ user.username }} <br>
+  <strong>Password:</strong> {{ user.password }} <br>
+<br>
+{% endfor %}
+
+{% endblock %}

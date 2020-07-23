@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap core css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
+{% extends "master.html" %}
+
+{% block CSS %}
     <link href="../static/css/login.css" rel="stylesheet">
-    <link rel="icon" href="../static/images/Sparta_Favicon.jpg" sizes="64x64" type="image/png">
-    <title>Sparta Quiz | Login</title>
-</head>
+{% endblock %}
+
+{% block title %}
+<title>Sparta Global | Login</title>
+{% endblock %}
+
+{% block content %}
+
 <body data-gr-c-s-loaded="true">
 <!--#region Login Inputs-->
 <form class="form-signin" action="" method="post">
@@ -35,17 +34,10 @@
   <button class="btn btn-lg btn-block text-white" style="background-color: #e33661" type="submit" value="Login">Sign in</button>
 
   <p class="mt-5 mb-3 text-muted text-center">© 2017-2020</p>
-    <!--#region error-->
-    {% if error %}
-    <p class="mt-5 mb-3 text-center error"><strong class="text-danger font-weight-bold" >Error:</strong> <span class="text-warning text-weight-normal">{{ error }} </span>
-    {% endif %}
-    <!--#endregion-->
+  {% endblock %}
+
 </form>
 <!--#endregion-->
-
-
-
-
-
 </body>
-</html>
+
+
