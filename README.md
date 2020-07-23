@@ -101,6 +101,25 @@ is a good starting point as it is a very common element in many companies and is
 * **MVC** the common and widely used Model, View and Controller design pattern
 * **HTML** and **Bootstrap** along with **Flask** micro-framework
 
+## To do List 
+
+- [x] **Interview** 
+
+- [x] **Email notes from interview to Shahrukh**
+- [x] **Finish Profile and Summary**
+- [ ] **MVC** using Flask (Exercise) GitHub Repo [**HERE**](https://github.com/JohnByrneJames/MVC_Flask/tree/54cc641928e32c68b95611c4cf4d515a55534657)
+    - [ ] Make Login Page
+    
+    - [ ] Create authentication check for successful login
+    - [ ] Incorporate API Status Code checking into Login too
+    - [ ] Add functionality to get questions from CSV/ JSON file
+    - [ ] Create a Quiz
+    - [ ] 10 Questions
+    - [ ] Multiple choice questions
+    - [ ] Give feedback (Score)
+`
+
+
 **Great Learning Resources**
 
 **Learn Flask with Python**
