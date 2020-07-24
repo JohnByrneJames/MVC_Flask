@@ -139,4 +139,4 @@ successful transfer from Login to Home page when the login was done successfully
 ![Image](Flask/static/images/login_Page_and_Quiz_ERD.svg)
 
 
-
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
