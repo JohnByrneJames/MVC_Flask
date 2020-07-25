@@ -5,7 +5,7 @@
       "A": ["{}", true],
       "B": ["[]", false],
       "C": ["()", false],
-      "D": ["dict{}", false]
+      "D": ["make_dictionary{}", false]
     },
     "Question2": {
       "Question": "Which of these built-in types are NOT Mutable?",

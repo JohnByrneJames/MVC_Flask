@@ -78,11 +78,16 @@ def login():
             return redirect(url_for('homepage'))
     return render_template("login.html", error=error)
 
-@app.route('/quiz')
+@app.route("/loading_questions")
 @login_required
 def quiz_page():
+    dictionary_of_questions = {}
+    pass
 
-
+# @app.route('/quiz')
+# @login_required
+# def quiz_page():
+#     pass
 
 @app.route('/logout')
 @login_required
