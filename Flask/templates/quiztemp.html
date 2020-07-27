@@ -17,18 +17,18 @@
         <img class="masthead-brand" src="../static/images/Sparta-global-logo-white.svg" alt="" width="200" height="200">
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link text-info disabled" href="#">Quiz</a>
         <a class="nav-link text-danger" href="/logout">Log Out</a>
       </nav>
     </div>
   </header>
-
+<form action="" method="post">
   <main role="main" class="row">
 
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4 font-weight-normal" style="color: white">Question</h1>
-  <p class="lead font-weight-normal text-white">{{ Question }}</p>
+  <h1 class="display-4 font-weight-normal" style="color: white">Question
+    <span class="font-weight-normal text-light border border-warning rounded" style="font-size: 20px;">{{ current_question }}/10</span></h1>
+  <p class="lead font-weight-normal text-white">{{ question }}</p>
 </div>
 
 <div class="container">
@@ -38,8 +38,8 @@
         <h4 class="my-0 font-weight-normal"><span class="font-weight-normal" style="color: #417fb1">Option </span><strong><span style="color: #ffde56"> 1</span></strong></h4>
       </div>
       <div class="card-body h-50 ">
-        <h5 class="card-title pricing-card-title"> {{ question 1 }} </h5>
-        <input type="radio" id="q1" name="question" value="1" style="transform:scale(1.5)">
+        <h5 class="card-title pricing-card-title"> {{ question1 }} </h5>
+        <input type="radio" id="q1" name="question" value="A" required style="transform:scale(1.5)">
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -47,8 +47,8 @@
         <h4 class="my-0 font-weight-normal"><span class="font-weight-normal" style="color: #417fb1">Option </span><strong><span style="color: #ffde56"> 2</span></strong></h4>
       </div>
       <div class="card-body h-50 ">
-        <h5 class="card-title pricing-card-title"> {{ question 2 }} </h5>
-        <input type="radio" id="q2" name="question" value="2" style="transform:scale(1.5)">
+        <h5 class="card-title pricing-card-title"> {{ question2 }} </h5>
+        <input type="radio" id="q2" name="question" value="B" style="transform:scale(1.5)">
       </div>
     </div>
   </div>
@@ -58,8 +58,8 @@
         <h4 class="my-0 font-weight-normal"><span class="font-weight-normal" style="color: #417fb1">Option </span><strong><span style="color: #ffde56"> 3</span></strong></h4>
       </div>
       <div class="card-body h-50 ">
-        <h5 class="card-title pricing-card-title"> {{ question 3 }} </h5>
-        <input type="radio" id="q3" name="question" value="3" style="transform:scale(1.5)">
+        <h5 class="card-title pricing-card-title"> {{ question3 }} </h5>
+        <input type="radio" id="q3" name="question" value="C" style="transform:scale(1.5)">
       </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -67,18 +67,19 @@
         <h4 class="my-0 font-weight-normal"><span class="font-weight-normal" style="color: #417fb1">Option </span><strong><span style="color: #ffde56"> 4</span></strong></h4>
       </div>
       <div class="card-body h-50 ">
-        <h5 class="card-title pricing-card-title"> {{ question 4 }} </h5>
-        <input type="radio" id="q4" name="question" value="4" style="transform:scale(1.5)">
+        <h5 class="card-title pricing-card-title"> {{ question4 }} </h5>
+        <input type="radio" id="q4" name="question" value="D" style="transform:scale(1.5)">
       </div>
     </div>
   </div>
 
-  <input value="Continue" type="button" class="btn btn-lg btn-secondary" style="background-color: #e33661">
+  <input value="Continue" type="submit" class="btn btn-lg btn-secondary" style="background-color: #e33661">
 </div>
 
 
 
   </main>
+  </form>
   <hr>
 
   <footer class="mastfoot mt-auto">
