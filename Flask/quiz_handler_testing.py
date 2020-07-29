@@ -1,7 +1,6 @@
 import json
 import random
 
-
 class QuizCreator:
     questions_all = None
     questions_QA = {}

@@ -4,7 +4,7 @@
       "Question": "How do you define a dictionary in Python?",
       "A": ["{}", true],
       "B": ["[]", false],
-      "C": ["()", false],git
+      "C": ["()", false],
       "D": ["make_dictionary{}", false]
     },
     "Question2": {

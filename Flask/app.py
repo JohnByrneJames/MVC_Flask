@@ -31,6 +31,12 @@ def connect_db():
     db_instance = DatabaseConnector("LAPTOP-23G2NM6G", "websiteDB")
     return db_instance.establish_connection()
 
+def clear_quiz_sessions():
+    # Destroy all session variables
+    session['correct_answer'] = None
+    session['question_score'] = None
+    session['question_counter'] = None
+    session['quiz_progress'].clear()
 
 def create_quiz_questions():
     # Create question assortment from 15 questions in a JSON file
@@ -53,7 +59,7 @@ def login_required(f):
 
 
 @app.route("/quiz", methods=['GET', 'POST'])
-# @login_required
+@login_required
 def quiz_page():
     # Start quiz by starting a quiz session variable, this also holds the question the user is on
     if not session.get('quiz_progress'):
@@ -70,14 +76,12 @@ def quiz_page():
             # Check if the user has entered the correct answer
             if request.form['question'] == session['correct_answer']:
                 session['question_score'] += 1
-        else:  # In case there is no answer fed back from the user
-            flash("You must provide a answer! Please select a option")
         # Update question counter
         session['question_counter'] += 1
 
         if session['question_counter'] == 10:
-            flash("Finished the Quiz.")
-            return redirect(url_for('base'))
+            # flash("Quiz finished. Well done!")
+            return redirect(url_for('results'))
 
     dict_QA = session['quiz_progress'][3].get('Question' +
                                               str(session['quiz_progress'][2][session.get('question_counter')]))
@@ -104,6 +108,20 @@ def quiz_page():
     # This is always called at the end
     return render_template("quiztemp.html", current_question=(session['question_counter'] + 1), question=question,
                            question1=question1, question2=question2, question3=question3, question4=question4)
+
+
+@app.route("/results")
+@login_required
+def results():
+    # Eventually will generate text file and email results, along with storing it in the database
+    # work out percentage
+    result = (session.get('question_score') / session.get('question_counter')) * 100
+
+    result = "Congratulations! you got " + int(result).__str__() + "% of the questions correct."
+
+    clear_quiz_sessions()
+
+    return render_template("results.html", results=result)
 
 
 @app.route("/")
@@ -154,6 +172,12 @@ def login():
 @login_required
 def logout():
     flash("See you next time " + session['user'].title() + "!")
+    try:
+        clear_quiz_sessions()  # Clear quiz sessions if any
+    except Exception:
+        # This catches exceptions if the user logs out without doing the quiz.
+        print("There was no session variables for the quiz..")
+
     session.pop('logged_in', None)  # Delete session key
     return redirect(url_for('login'))
 
